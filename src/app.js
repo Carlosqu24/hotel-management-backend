@@ -29,6 +29,7 @@ app.use(morgan('dev'));
 
 // ROUTES
 app.use('/api/rooms', require('./routes/rooms.routes'));
+app.use('/api/customers', require('./routes/customer.routes'));
 
 
 module.exports = app;
