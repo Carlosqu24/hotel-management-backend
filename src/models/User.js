@@ -20,7 +20,7 @@ const userSchema = new Schema({
       roles: [
             {
                   type: Schema.Types.ObjectId,
-                  ref: "Role"
+                  ref: "Roles"
             }
       ]
 });
@@ -35,4 +35,4 @@ userSchema.statics.comparePassword = async (password, receivedPassword) => {
       return await bcrypt.compare(password, receivedPassword);
 };
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Users', userSchema);
