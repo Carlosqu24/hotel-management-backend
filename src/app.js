@@ -23,12 +23,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 
-// GLOBAL VARIABLES
-
-
-
 // ROUTES
 app.use('/api/rooms', require('./routes/rooms.routes'));
+app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/customers', require('./routes/customer.routes'));
 
 
